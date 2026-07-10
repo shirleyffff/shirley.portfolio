@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirley Fung | Marketing & Communications Portfolio</title>
+    <meta name="description" content="Shirley Fung - Marketing & Communications Specialist based in Hong Kong. 3 years experience in cross-border digital marketing, event operations, and multi-platform content strategy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============ CSS Variables ============ */
+        :root {
+            --bg-primary: #FCFAF7;
+            --bg-secondary: #F5F2EC;
+            --bg-card: #FFFFFF;
+            --bg-dark: #1C1814;
+
+            --text-primary: #1C1C1C;
+            --text-secondary: #5C5C5C;
+            --text-muted: #969696;
+            --text-on-dark: #F0EDE8;
+            --text-on-dark-muted: #A0988C;
+
+            --accent: #8B6F47;
+            --accent-hover: #6D5536;
+            --accent-light: rgba(139, 111, 71, 0.08);
+            --accent-subtle: rgba(139, 111, 71, 0.04);
+
+            --border: #E8E3DB;
+            --border-light: #F0ECE6;
+
+            --shadow-xs: 0 1px 2px rgba(28, 24, 20, 0.04);
+            --shadow-sm: 0 1px 3px rgba(28, 24, 20, 0.06), 0 1px 2px rgba(28, 24, 20, 0.04);
+            --shadow: 0 4px 6px rgba(28, 24, 20, 0.05), 0 2px 4px rgba(28, 24, 20, 0.04);
+            --shadow-md: 0 8px 16px rgba(28, 24, 20, 0.06), 0 4px 8px rgba(28, 24, 20, 0.04);
+            --shadow-lg: 0 16px 32px rgba(28, 24, 20, 0.08), 0 8px 16px rgba(28, 24, 20, 0.04);
+            --shadow-xl: 0 24px 48px rgba(28, 24, 20, 0.1), 0 12px 24px rgba(28, 24, 20, 0.06);
+
+            --radius-sm: 0.375rem;
+            --radius: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ============ Reset & Base ============ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ============ Utility Classes ============ */
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 7rem 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            line-height: 1.25;
+        }
+
+        .section-subtitle {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            margin-bottom: 3.5rem;
+            line-height: 1.7;
+            max-width: 520px;
+        }
+
+        .accent-line {
+            width: 3rem;
+            height: 2px;
+            background: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+            letter-spacing: 0.01em;
+            line-height: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+        }
+        .btn-primary:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+        }
+        .btn-outline:hover {
+            border-color: var(--text-primary);
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--accent);
+            padding: 0.5rem 0;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            transition: gap var(--transition-fast);
+        }
+        .btn-ghost:hover {
+            gap: 0.625rem;
+        }
+
+        /* ============ Navigation ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all var(--transition);
+            padding: 0.25rem 0;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(252, 250, 247, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 1px 0 var(--border-light);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.06em;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color var(--transition-fast);
+            letter-spacing: 0.02em;
+            position: relative;
+            padding: 0.25rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background-color: var(--accent);
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ============ Hero Section ============ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+            background: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -25%;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            max-width: 520px;
+        }
+
+        .hero-text .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profile-card {
+            position: relative;
+            padding: 0.625rem;
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            transition: transform var(--transition-slow);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 32px 64px rgba(28, 24, 20, 0.12), 0 16px 32px rgba(28, 24, 20, 0.08);
+        }
+
+        .profile-card img {
+            width: 300px;
+            height: 360px;
+            object-fit: cover;
+            border-radius: var(--radius);
+        }
+
+        .profile-card .card-accent {
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0.5;
+        }
+
+        /* ============ Stats Section ============ */
+        .stats {
+            background-color: var(--bg-dark);
+            color: var(--text-on-dark);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(139, 111, 71, 0.3), transparent);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-item p {
+            font-size: 0.8125rem;
+            color: var(--text-on-dark-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ============ About Section ============ */
+        .about {
+            background-color: var(--bg-primary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.85;
+        }
+
+        .about-text strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Timeline */
+        .timeline-list {
+            list-style: none;
+            position: relative;
+        }
+
+        .timeline-list::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1.5px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--border) 80%, transparent 100%);
+        }
+
+        .timeline-item {
+            padding-left: 2rem;
+            padding-bottom: 2.75rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            background-color: var(--bg-primary);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            transition: all var(--transition);
+        }
+
+        .timeline-item:hover::before {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 6px var(--accent-light);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .timeline-meta {
+            font-size: 0.8125rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.875rem;
+            letter-spacing: 0.02em;
+        }
+
+        .timeline-desc {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* ============ Skills Section ============ */
+        .skills {
+            background-color: var(--bg-secondary);
+            position: relative;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background-color: var(--bg-card);
+            padding: 2rem 2rem 1.75rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .skill-category:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+            border-color: transparent;
+        }
+
+        .skill-category:hover::before {
+            opacity: 1;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.375rem 0.875rem;
+            background-color: var(--accent-subtle);
+            border: 1px solid var(--border-light);
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all var(--transition-fast);
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--accent);
+            color: #FFFFFF;
+            border-color: var(--accent);
+        }
+
+        /* ============ Portfolio Section ============ */
+        .portfolio {
+            background-color: var(--bg-primary);
+        }
+
+        .portfolio-filters {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--border);
+            background: transparent;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: 100px;
+            transition: all var(--transition-fast);
+            letter-spacing: 0.02em;
+        }
+
+        .filter-btn.active {
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+            border-color: var(--text-primary);
+        }
+
+        .filter-btn:hover:not(.active) {
+            border-color: var(--text-secondary);
+            color: var(--text-primary);
+            background-color: var(--accent-subtle);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .portfolio-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+            border-color: transparent;
+        }
+
+        .portfolio-media {
+            display: block;
+            height: 240px;
+            background-color: var(--bg-secondary);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .portfolio-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-media iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .portfolio-card:hover .portfolio-media img {
+            transform: scale(1.04);
+        }
+
+        .portfolio-media .media-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(28, 24, 20, 0.6));
+            opacity: 0;
+            transition: opacity var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .portfolio-card:hover .media-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem 1.75rem 1.75rem;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--accent-subtle);
+            color: var(--accent);
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-radius: 100px;
+            margin-bottom: 0.875rem;
+            margin-right: 0.375rem;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+
+        .portfolio-info p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ============ Contact Section ============ */
+        .contact {
+            background-color: var(--bg-secondary);
+            position: relative;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-text p {
+            color: var(--text-secondary);
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-illustration {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 360px;
+        }
+
+        .contact-card .contact-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--accent-subtle);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            color: var(--accent);
+        }
+
+        .contact-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card .email-link {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 0.9375rem;
+            transition: color var(--transition-fast);
+        }
+        .contact-card .email-link:hover {
+            color: var(--accent-hover);
+        }
+
+        /* ============ Footer ============ */
+        .footer {
+            background-color: var(--bg-dark);
+            color: var(--text-on-dark-muted);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.8125rem;
+        }
+
+        /* ============ Animations ============ */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .section {
+            animation: fadeInUp 0.7s ease-out;
+        }
+
+        .hero-text {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-image {
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        /* ============ Responsive ============ */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text .subtitle {
+                max-width: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-text .hero-eyebrow {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .profile-card img {
+                width: 240px;
+                height: 300px;
+            }
+
+            .hero::before {
+                top: -10%;
+                right: -40%;
+                width: 500px;
+                height: 500px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-text p {
+                max-width: none;
+            }
+
+            .contact-illustration {
+                justify-content: flex-start;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 4.5rem 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-item h3 {
+                font-size: 2.25rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 260px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .hero-text h1 {
+                font-size: 1.75rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-category {
+                padding: 1.5rem;
+            }
+
+            .portfolio-info {
+                padding: 1.25rem;
+            }
+        }
+
+        /* ============ Edit Mode Styles ============ */
+        .edit-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all var(--transition);
+        }
+        .edit-toggle:hover {
+            transform: scale(1.08);
+            background: var(--accent);
+        }
+        .edit-toggle.active {
+            background: #C0392B;
+            animation: pulse-edit 2s infinite;
+        }
+        @keyframes pulse-edit {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.4); }
+            50% { box-shadow: 0 0 0 14px rgba(192, 57, 43, 0); }
+        }
+
+        .edit-toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9998;
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 0.75rem 2rem;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            font-weight: 500;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .edit-toolbar.visible {
+            display: flex;
+        }
+        .edit-toolbar .toolbar-hint {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .edit-toolbar .hint-item {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.75rem;
+            opacity: 0.85;
+        }
+        .edit-toolbar .hint-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .hint-dot.text  { background: #5B9BD5; }
+        .hint-dot.image { background: #E8A838; }
+        .hint-dot.link  { background: #6BAF7B; }
+        .hint-dot.video { background: #9B7EC4; }
+        .btn-export {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-sm);
+            border: none;
+            font-weight: 600;
+            font-size: 0.8125rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        .btn-export:hover {
+            background: var(--bg-secondary);
+            transform: translateY(-1px);
+        }
+
+        body.edit-mode .editable-text {
+            outline: 2px dashed #5B9BD5;
+            outline-offset: 3px;
+            background-color: rgba(91, 155, 213, 0.05);
+            cursor: text;
+            transition: all 0.2s;
+            border-radius: 2px;
+        }
+        body.edit-mode .editable-text:hover {
+            background-color: rgba(91, 155, 213, 0.1);
+        }
+        body.edit-mode .editable-text:focus {
+            outline: 2px solid #5B9BD5;
+            background-color: rgba(91, 155, 213, 0.12);
+        }
+        body.edit-mode .editable-img {
+            outline: 3px dashed #E8A838;
+            outline-offset: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        body.edit-mode .editable-img:hover {
+            outline-color: #D4952A;
+            filter: brightness(0.93);
+        }
+        body.edit-mode .editable-link {
+            outline: 2px dashed #6BAF7B;
+            outline-offset: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        body.edit-mode .editable-link:hover {
+            outline-color: #4D9A5F;
+            background-color: rgba(107, 175, 123, 0.08);
+        }
+        body.edit-mode .editable-iframe-area {
+            outline: 3px dashed #9B7EC4;
+            outline-offset: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        body.edit-mode .editable-iframe-area:hover {
+            outline-color: #7B5EA8;
+            background-color: rgba(155, 126, 196, 0.08);
+        }
+
+        body.edit-mode .section {
+            animation: none;
+        }
+
+        @media (max-width: 768px) {
+            .edit-toolbar {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+            .edit-toolbar .toolbar-hint {
+                gap: 0.75rem;
+            }
+            .edit-toggle {
+                bottom: 1rem;
+                right: 1rem;
+                width: 44px;
+                height: 44px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Edit Mode Toggle -->
+    <button class="edit-toggle" id="editToggle" title="Toggle Edit Mode" onclick="toggleEditMode()" aria-label="Edit page content">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+    </button>
+    <!-- Edit Toolbar -->
+    <div class="edit-toolbar" id="editToolbar">
+        <div class="toolbar-hint">
+            <span>✏️ <strong>Edit Mode</strong></span>
+            <span class="hint-item"><span class="hint-dot text"></span> Click text to edit</span>
+            <span class="hint-item"><span class="hint-dot image"></span> Click image to change</span>
+            <span class="hint-item"><span class="hint-dot link"></span> Click link to change</span>
+            <span class="hint-item"><span class="hint-dot video"></span> Click video to change</span>
+        </div>
+        <button class="btn-export" onclick="exportHTML()">⬇ Export HTML</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="nav-logo">Shirley Fung</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-eyebrow">Marketing &amp; Communications</span>
+                    <h1>Crafting stories that connect markets and cultures</h1>
+                    <p class="subtitle">
+                        I'm <strong class="highlight">Shirley Fung</strong>, based in Hong Kong.
+                        I bring 3 years of expertise in cross-border digital marketing,
+                        end-to-end event operations, and multi-platform content strategy —
+                        growing social media presence to 60K+ followers across 10+ platforms
+                        while delivering high-engagement campaigns for international and
+                        Mainland Chinese audiences.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <img src="https://github.com/user-attachments/assets/4051641b-c33c-417f-a282-196e7577b8f5" alt="Shirley Fung">
+                        <div class="card-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>60K+</h3>
+                    <p>Social Followers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30K+</h3>
+                    <p>WeChat Readers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1.3K+</h3>
+                    <p>Event Attendees</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Channels Managed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-label">About</span>
+                    <h2 class="section-title">Professional Summary</h2>
+                    <div class="accent-line"></div>
+                    <p>
+                        Dynamic Marketing and Communications Specialist with <strong>3 years of experience</strong>
+                        specializing in cross-border and cross-platform digital marketing. Proven ability to
+                        establish social media presence from inception and execute high-engagement content
+                        strategy for international and Mainland Chinese markets.
+                    </p>
+                    <p>
+                        Adept at handling <strong>end-to-end event operations</strong> and managing cross-functional
+                        stakeholder relations within top-tier institutional environments — from university-wide
+                        Open Days to high-profile media engagements.
+                    </p>
+                </div>
+                <div class="timeline">
+                    <span class="section-label">Experience</span>
+                    <h2 class="section-title">Career Timeline</h2>
+                    <div class="accent-line"></div>
+                    <ul class="timeline-list">
+                        <li class="timeline-item">
+                            <h4>HKU — Project Assistant</h4>
+                            <p class="timeline-meta">School of Computing and Data Science &middot; Jan 2026 &ndash; Present</p>
+                            <p class="timeline-desc">
+                                Launched the School's inaugural <strong>Xiaohongshu</strong> account from scratch and managed
+                                multi-platform social presence across LinkedIn, Instagram, and X. Authored viral
+                                <strong>WeChat articles (30K+ reads)</strong> and 4 press releases, while securing high-profile
+                                media coverage with <strong>Ming Pao JUMP</strong> and <strong>Wen Wei Po</strong>. Orchestrated
+                                the <strong>CDS Shanghai Open Day</strong> end-to-end (1,300+ attendees), coordinated 6 distinguished
+                                lectures (300+ students), and independently developed the Shanghai Semester website.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4>HKUST — Assistant Officer</h4>
+                            <p class="timeline-meta">Global Engagement and Communication Office &middot; Aug 2023 &ndash; Jan 2026</p>
+                            <p class="timeline-desc">
+                                Managed the university's official presence across <strong>10 social media platforms</strong>
+                                spanning LinkedIn, Facebook, Instagram, Twitter, YouTube, WeChat, Xiaohongshu, Bilibili,
+                                and Weibo — driving <strong>60K+ follower growth</strong>. Designed bilingual content
+                                calendars averaging 3 themed posts daily, generating <strong>40K+ total engagement</strong>.
+                                Compiled quarterly and biannual analytics reports, and drove a <strong>10% engagement boost</strong>
+                                through strategic event campaigns and vendor-managed project tenders.
+                            </p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4>Mercer — Strategy Intern</h4>
+                            <p class="timeline-meta">Strategy Operations &middot; May 2023 &ndash; Aug 2023</p>
+                            <p class="timeline-desc">
+                                Conducted independent desk research on <strong>10 major clients</strong> across internet,
+                                technology, and medical sectors — analyzing business status, HR dynamics, and competitive
+                                landscapes. Produced <strong>50+ pages of analytical presentations</strong> to support
+                                senior management in identifying new business opportunities. Accompanied leadership on
+                                client visits for business development.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <span class="section-label">Expertise</span>
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+            <p class="section-subtitle">A balanced toolkit spanning event operations, digital marketing, creative production, and multilingual communication.</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Event Management</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Full-lifecycle Planning</span>
+                        <span class="skill-tag">Vendor Management</span>
+                        <span class="skill-tag">Stakeholder Liaison</span>
+                        <span class="skill-tag">Budget Management</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Digital Marketing</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Google Analytics</span>
+                        <span class="skill-tag">Meta Business Suite</span>
+                        <span class="skill-tag">Qualtrics</span>
+                        <span class="skill-tag">Content Strategy</span>
+                        <span class="skill-tag">SEO/SEM</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Creative &amp; AI Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Premiere Pro</span>
+                        <span class="skill-tag">Illustrator</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">ChatGPT</span>
+                        <span class="skill-tag">Midjourney</span>
+                        <span class="skill-tag">MS Office</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Mandarin (Native)</span>
+                        <span class="skill-tag">English (IELTS 7)</span>
+                        <span class="skill-tag">Cantonese (Fluent)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Selected Work &amp; Projects</h2>
+            <p class="section-subtitle">A curated selection of recent projects spanning events, digital content, and multimedia production.</p>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" onclick="filterPortfolio('all')">All Work</button>
+                <button class="filter-btn" onclick="filterPortfolio('event')">Events</button>
+                <button class="filter-btn" onclick="filterPortfolio('digital')">Digital</button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <div class="portfolio-card" data-category="digital">
+                    <a href="https://www.instagram.com/hku.cds/" target="_blank" rel="noopener" class="portfolio-media">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&fit=crop" alt="Multi-Channel Visual Identity" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:#969696;font-size:0.875rem;background:var(--bg-secondary);\'>Design Assets</div>'">
+                        <div class="media-overlay">
+                            <span style="color:#fff;font-size:0.8125rem;font-weight:500;">View on Instagram &rarr;</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Design</span>
+                        <span class="portfolio-tag">Social Media</span>
+                        <h3>Multi-Channel Visual Identity</h3>
+                        <p>
+                            Designed on-brand infographics and social media assets.
+                            Elevated institutional presence across digital touchpoints.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="event">
+                    <a href="https://www.cds.hku.hk/news/hku-cds-shanghai-welcomes-over-1300-visitors-at-inaugural-open-day/" target="_blank" rel="noopener" class="portfolio-media">
+                        <img src="https://github.com/user-attachments/assets/c8a867fe-eb67-45ec-ba82-15569be221fa" alt="Event Coordination" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:#969696;font-size:0.875rem;background:var(--bg-secondary);\'>Event Management</div>'">
+                        <div class="media-overlay">
+                            <span style="color:#fff;font-size:0.8125rem;font-weight:500;">Read Article &rarr;</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Events</span>
+                        <span class="portfolio-tag">Press Release</span>
+                        <h3>Event Coordination</h3>
+                        <p>
+                            Coordinated 1,300+ international attendees for Open Days
+                            and distinguished lecture series.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="digital">
+                    <a href="https://youtu.be/zhjP20Jqub8" target="_blank" rel="noopener" class="portfolio-media">
+                        <img src="https://github.com/user-attachments/assets/a8bf351c-2a95-4e74-bdfa-f56f269368f4" alt="Bilingual Video Production" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:#969696;font-size:0.875rem;background:var(--bg-secondary);\'>Video Production</div>'">
+                        <div class="media-overlay">
+                            <span style="color:#fff;font-size:0.8125rem;font-weight:500;">Watch on YouTube &rarr;</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Video</span>
+                        <h3>Bilingual Video Production &amp; Asset Management</h3>
+                        <p>
+                            Directed, shot, and edited promotional videos using
+                            Adobe Creative Suite. Ensured all multimedia met strict
+                            university branding guidelines.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="event">
+                    <div class="portfolio-media">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&fit=crop" alt="Vendor Procurement" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:#969696;font-size:0.875rem;background:var(--bg-secondary);\'>Operations</div>'">
+                        <div class="media-overlay">
+                            <span style="color:#fff;font-size:0.8125rem;font-weight:500;">View Project &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Operations</span>
+                        <h3>Vendor Procurement &amp; Logistical Roadmaps</h3>
+                        <p>
+                            Supervised comprehensive procurement lifecycles, structured
+                            vendor project tenders, and drafted rigorous quarterly
+                            performance data reports for administrative leadership.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-category="digital">
+                    <a href="https://sh.cds.hku.hk/" target="_blank" rel="noopener" class="portfolio-media">
+                        <img src="https://github.com/user-attachments/assets/8d91a995-b23f-471a-840f-ee7741dcfb4d" alt="HKU CDS Shanghai Semester Website" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:#969696;font-size:0.875rem;background:var(--bg-secondary);\'>Website Design</div>'">
+                        <div class="media-overlay">
+                            <span style="color:#fff;font-size:0.8125rem;font-weight:500;">Visit Website &rarr;</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web Design</span>
+                        <span class="portfolio-tag">UI/UX</span>
+                        <h3>HKU CDS Shanghai Semester Website</h3>
+                        <p>
+                            Independently designed and built the full website UI and content
+                            architecture — from wireframing and visual design to copywriting
+                            and information hierarchy — delivering a clean, user-friendly
+                            experience for prospective students and stakeholders.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-text">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title">Let's work together</h2>
+                    <div class="accent-line"></div>
+                    <p>
+                        Interested in event coordination, communications, or multimedia design?
+                        I'd love to connect and explore how we can collaborate.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:fenglingjie@foxmail.com" class="btn btn-primary">Email Me</a>
+                        <a href="https://wa.me/85267913109" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+                        <a href="https://www.linkedin.com/in/lingjie-feng-974456230" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="contact-illustration">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <h3>Shirley Fung</h3>
+                        <p style="color:var(--text-secondary);font-size:0.875rem;margin-bottom:0.5rem;">Hong Kong</p>
+                        <p style="color:var(--text-secondary);font-size:0.875rem;margin-bottom:0.75rem;">+852 6791 3109</p>
+                        <a href="mailto:fenglingjie@foxmail.com" class="email-link">fenglingjie@foxmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Shirley Fung. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Portfolio filter
+        function filterPortfolio(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.portfolio-card');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ============ Edit Mode ============
+        let isEditMode = false;
+
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            const body = document.body;
+            const toggle = document.getElementById('editToggle');
+            const toolbar = document.getElementById('editToolbar');
+
+            if (isEditMode) {
+                body.classList.add('edit-mode');
+                toggle.classList.add('active');
+                toolbar.classList.add('visible');
+                enableEditing();
+            } else {
+                body.classList.remove('edit-mode');
+                toggle.classList.remove('active');
+                toolbar.classList.remove('visible');
+                disableEditing();
+            }
+        }
+
+        function enableEditing() {
+            const textSelectors = [
+                '.nav-logo', '.hero-text h1', '.hero-text .subtitle', '.hero-text .hero-eyebrow',
+                '.stat-item h3', '.stat-item p', '.about-text p', '.timeline-item h4',
+                '.timeline-meta', '.timeline-desc', '.skill-category h3', '.skill-tag',
+                '.portfolio-info h3', '.portfolio-info p', '.portfolio-tag',
+                '.contact-text p', '.footer p', '.section-title', '.section-label',
+                '.section-subtitle', '.contact-card h3', '.contact-card p', '.email-link'
+            ];
+            textSelectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.classList.add('editable-text');
+                    el.contentEditable = 'true';
+                });
+            });
+
+            document.querySelectorAll('img').forEach(img => {
+                img.classList.add('editable-img');
+                img.addEventListener('click', handleImageEdit);
+            });
+
+            document.querySelectorAll('a[href^="http"], a[href^="mailto"]').forEach(link => {
+                link.classList.add('editable-link');
+                link.addEventListener('click', handleLinkEdit);
+            });
+
+            document.querySelectorAll('iframe').forEach(iframe => {
+                const parent = iframe.parentElement;
+                parent.classList.add('editable-iframe-area');
+                parent.addEventListener('click', handleIframeEdit);
+            });
+        }
+
+        function disableEditing() {
+            document.querySelectorAll('.editable-text').forEach(el => {
+                el.contentEditable = 'false';
+                el.classList.remove('editable-text');
+            });
+            document.querySelectorAll('.editable-img').forEach(img => {
+                img.classList.remove('editable-img');
+                img.removeEventListener('click', handleImageEdit);
+            });
+            document.querySelectorAll('.editable-link').forEach(link => {
+                link.classList.remove('editable-link');
+                link.removeEventListener('click', handleLinkEdit);
+            });
+            document.querySelectorAll('.editable-iframe-area').forEach(el => {
+                el.classList.remove('editable-iframe-area');
+                el.removeEventListener('click', handleIframeEdit);
+            });
+        }
+
+        function handleImageEdit(e) {
+            if (!isEditMode) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const img = e.target.closest('img');
+            if (!img) return;
+            const currentSrc = img.getAttribute('src') || '';
+            const newSrc = prompt('🖼️ Edit image source URL:\n\n(Enter a new URL or path)', currentSrc);
+            if (newSrc !== null && newSrc.trim() !== '') {
+                img.src = newSrc.trim();
+                img.removeAttribute('onerror');
+            }
+        }
+
+        function handleLinkEdit(e) {
+            if (!isEditMode) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const link = e.target.closest('a');
+            if (!link) return;
+            const currentHref = link.getAttribute('href') || '';
+            const linkText = link.textContent.trim().substring(0, 30);
+            const newHref = prompt('🔗 Edit link URL for "' + linkText + '":\n\n(Enter a new URL or mailto: address)', currentHref);
+            if (newHref !== null && newHref.trim() !== '') {
+                link.href = newHref.trim();
+            }
+        }
+
+        function handleIframeEdit(e) {
+            if (!isEditMode) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const iframe = e.target.closest('.editable-iframe-area')?.querySelector('iframe');
+            if (!iframe) return;
+            const currentSrc = iframe.getAttribute('src') || '';
+            const newSrc = prompt('🎬 Edit YouTube embed URL:\n\n(Enter a new embed URL, e.g. https://www.youtube.com/embed/VIDEO_ID)', currentSrc);
+            if (newSrc !== null && newSrc.trim() !== '') {
+                iframe.src = newSrc.trim();
+            }
+        }
+
+        function exportHTML() {
+            const wasEditMode = isEditMode;
+            if (wasEditMode) {
+                disableEditing();
+                document.body.classList.remove('edit-mode');
+            }
+
+            const html = document.documentElement.outerHTML;
+
+            let cleanHTML = html
+                .replace(/<button[^>]*id="editToggle"[^>]*>[\s\S]*?<\/button>/g, '')
+                .replace(/<div[^>]*id="editToolbar"[^>]*>[\s\S]*?<\/div>/g, '')
+                .replace(/ class="edit-mode"/g, '')
+                .replace(/ contenteditable="true"/gi, '')
+                .replace(/ contenteditable="false"/gi, '');
+
+            cleanHTML = '<!DOCTYPE html>\n' + cleanHTML;
+
+            if (wasEditMode) {
+                document.body.classList.add('edit-mode');
+                enableEditing();
+            }
+
+            const blob = new Blob([cleanHTML], { type: 'text/html;charset=UTF-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'portfolio_edited.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
